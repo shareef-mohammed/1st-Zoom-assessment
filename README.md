@@ -17,10 +17,10 @@ This is a RESTful CRUD API for managing cameras and camera networks.
 • PUT /cameras/:id: Update a camera by ID
 • DELETE /cameras/:id: Delete a camera by ID
 ### Camera Networks
-• GET /cameranetworks: Get all camera networks with their cameras
-• POST /cameranetworks: Create a new camera network
-• PUT /cameranetworks/:id: Update a camera network by ID
-• DELETE /cameranetworks/:id: Delete a camera network by ID
+• GET /cameraNetworks: Get all camera networks with their cameras
+• POST /cameraNetworks: Create a new camera network
+• PUT /cameraNetworks/:id: Update a camera network by ID
+• DELETE /cameraNetworks/:id: Delete a camera network by ID
 ## API Data
 ### Cameras
 A camera object has the following properties:
