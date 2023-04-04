@@ -1,5 +1,12 @@
 const express = require('express');
-const { getCameras } = require('../controllers/cameraContoller');
-const router = express();
+const { getCameras, setCamera, updateCamera, deleteCamera } = require('../controllers/cameraContoller');
+const router = express.Router();
 
-router.get('/cameras', getCameras);
+router.route('/cameras')
+    .get(getCameras)
+    .post(setCamera)
+router.route('/cameras/:id')
+    .put(updateCamera)
+    .delete(deleteCamera)
+
+module.exports = router

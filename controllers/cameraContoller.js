@@ -14,7 +14,7 @@ module.exports.setCamera = async (req, res) => {
     try {
         const { name, description, url } = req.body;
         if(!name || !description || !url) {
-            return res.status(401).send('Invalid input');
+            return res.status(409).send('Invalid input');
         }
         const camera = new CameraData ({
             name, description, url
@@ -31,7 +31,7 @@ module.exports.updateCamera = async(req, res) => {
         const { id } = req.params;
         const { name, description, url } = req.body;
         if(!name || !description || !url) {
-            return res.status(401).send('Invalid input');
+            return res.status(409).send('Invalid input');
         }
         const camera = await CameraData.findByIdAndUpdate(id, {
             name, description, url
